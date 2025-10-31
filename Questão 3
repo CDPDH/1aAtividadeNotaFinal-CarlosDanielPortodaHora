@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mudar Cor de Fundo</title>
+
+  <style>
+    .title {
+      color: #5C6AC4;
+      text-align: center;
+    }
+
+    .body {
+      font-family: Arial, Sans-Serif;
+      background-color: #f2f1fa;
+      margin: 25px;
+    }
+
+    .box-model {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid #a97bdc;
+      border-radius: 20px;
+      margin: 30px auto;
+      background-color: #e7d8ff;
+      text-align: center;
+    }
+
+    .text {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .button {
+      background-color: #5C6AC4;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="box-model">
+    <h1 class="title">Mudar Cor de Fundo</h1>
+
+    <p class="text">Clique para trocar a cor da página.</p>
+
+    <button class="button" onclick="mudarCor()">Mudar Cor</button>
+  </div>
+
+  <script>
+    let cores = ['#f2f1fa', '#e7d8ff', '#ffd6e7', '#e6ffe6', '#e0ebff'];
+    let indice = 0;
+
+    function mudarCor() {
+      let corAtual = cores[indice];
+      document.body.style.backgroundColor = corAtual;
+
+      if (indice < cores.length - 1) {
+        indice = indice + 1;
+      } else {
+        indice = 0;
+      }
+    }
+  </script>
+</body>
+</html>
