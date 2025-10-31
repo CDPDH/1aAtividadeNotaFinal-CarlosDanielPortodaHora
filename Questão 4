@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de IMC</title>
+
+  <style>
+    .title {
+      color: #5C6AC4;
+      text-align: center;
+    }
+
+    .body {
+      font-family: Arial, Sans-Serif;
+      background-color: #f2f1fa;
+      margin: 25px;
+    }
+
+    .box-model {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid #a97bdc;
+      border-radius: 20px;
+      margin: 30px auto;
+      background-color: #e7d8ff;
+      text-align: center;
+    }
+
+    .input {
+      width: 90%;
+      padding: 8px;
+      margin: 6px 0;
+      border: 2px solid #a97bdc;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .button {
+      background-color: #5C6AC4;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .resultado {
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .text {
+      color: #333;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="box-model">
+    <h1 class="title">Calculadora de IMC</h1>
+
+    <input class="input" id="peso" placeholder="Peso (kg)">
+    <input class="input" id="altura" placeholder="Altura (m)">
+
+    <button class="button" onclick="calcular()">Calcular IMC</button>
+
+    <p id="res" class="resultado"></p>
+
+    <p class="text">IMC = peso / (altura × altura)</p>
+  </div>
+
+  <script>
+    function calcular() {
+      let pesoDigitado = document.getElementById("peso").value;
+      let alturaDigitada = document.getElementById("altura").value;
+
+      let peso = Number(pesoDigitado);
+      let altura = Number(alturaDigitada);
+
+      let imc = peso / (altura * altura);
+
+      let mensagem = "";
+
+      if (imc < 18.5) {
+        mensagem = "Abaixo do peso";
+      } else if (imc < 25) {
+        mensagem = "Peso normal";
+      } else if (imc < 30) {
+        mensagem = "Sobrepeso";
+      } else {
+        mensagem = "Obesidade";
+      }
+
+      document.getElementById("res").innerHTML = "IMC: " + imc.toFixed(2) + " - " + mensagem;
+    }
+  </script>
+</body>
+</html>
