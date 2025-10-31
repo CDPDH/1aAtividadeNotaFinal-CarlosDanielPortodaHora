@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <style>
+    .title {
+      color: #5C6AC4;
+      text-align: center;
+    }
+
+    img {
+      height: 130px;
+      width: 130px;
+      border-radius: 50%;
+      border: 6px solid #a97bdc;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .body {
+      font-family: Arial, Sans-Serif;
+      background-color: #f2f1fa;
+      margin: 25px;
+    }
+
+    .box-model {
+      width: 330px;
+      padding: 20px;
+      border: 2px solid #a97bdc;
+      border-radius: 20px;
+      margin: 30px auto;
+      background-color: #e7d8ff;
+      text-align: center;
+    }
+
+    .text {
+      color: #333;
+      font-size: 14px;
+    }
+
+    .skills {
+      margin-top: 15px;
+    }
+
+    .skill {
+      display: inline-block;
+      background-color: #5C6AC4;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 12px;
+    }
+
+    .links a {
+      color: #5C6AC4;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <meta charset="UTF-8">
+  <title>Carlos Daniel Porto da Hora</title>
+</head>
+<body class="body">
+  <div class="box-model">
+    <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295394_1280.png" alt="Foto de perfil">
+
+    <h1 class="title">Carlos Daniel Porto da Hora</h1>
+    <h2 class="text">Matrícula: 202508396807</h2>
+    <h3 class="text">Estudante de Ciências da Computação</h3>
+
+    <p class="text">Me chamo Carlos Daniel, estudante de ciências da computação e tenho muito interesse por IA, apos a faculdade desejo entrar pro mercado de IA.</p>
+
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/CDPDH" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/carlos-daniel-porto-da-hora-724a8a394/" target="_blank">LinkedIn</a> |
+      <a href="https://x.com/Luxxyof" target="_blank">Twitter</a>
+    </div>
+  </div>
+</body>
+</html>
